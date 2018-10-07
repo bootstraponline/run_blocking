@@ -19,6 +19,6 @@ pluginManagement {
         }
     }
 }
-rootProject.name = 'example'
+rootProject.name = 'run_blocking'
 
 enableFeaturePreview('GRADLE_METADATA')
