@@ -1,12 +1,12 @@
 package example
 
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 class GitHubTest {
     @Test
     fun getGitHubSucceeds() {
-        // TODO: impossible to test suspend functions in common without runBlocking
-        // https://youtrack.jetbrains.com/issue/KT-22228
-        // getGitHub().request
+        val response = getGitHub().response
+        assertEquals(response.status.value, 301)
     }
 }
