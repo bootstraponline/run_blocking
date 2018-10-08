@@ -7,10 +7,10 @@ import kotlinx.coroutines.CoroutineScope
 import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.EmptyCoroutineContext
 
-expect fun <T> runBlocking(context: CoroutineContext = EmptyCoroutineContext, block: suspend CoroutineScope.() -> T): T
-
 // runBlocking doesn't exist in common
 // https://github.com/Kotlin/kotlinx.coroutines/issues/195
+expect fun <T> runBlocking(context: CoroutineContext = EmptyCoroutineContext, block: suspend CoroutineScope.() -> T): T
+
 fun getGitHub(): HttpClientCall = runBlocking {
     val client = HttpClient()
     val urlString = "https://www.github.com"
