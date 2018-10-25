@@ -8,6 +8,6 @@ class GitHubTest {
     @Test
     fun getGitHubSucceeds() {
         val response = getGitHub().response
-        assertEquals(response.status.value, 301)
+        assertEquals(200, response.status.value)
     }
 }
