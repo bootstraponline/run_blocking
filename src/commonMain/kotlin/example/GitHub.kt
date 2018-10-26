@@ -12,7 +12,5 @@ import kotlin.coroutines.EmptyCoroutineContext
 expect fun <T> runBlocking(context: CoroutineContext = EmptyCoroutineContext, block: suspend CoroutineScope.() -> T): T
 
 fun getGitHub(): HttpClientCall = runBlocking {
-    val client = HttpClient()
-    val urlString = "https://www.github.com"
-    client.call(urlString)
+    HttpClient().call("https://www.github.com")
 }
