@@ -1,5 +1,7 @@
 #!/bin/bash
 
+./gradlew clean assemble
+
 rm -rf "../ios/ios-frameworks/run_blocking.framework/"
 rm -rf "../ios/ios-frameworks/run_blocking.framework.dSYM"
 
