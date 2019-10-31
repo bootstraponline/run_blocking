@@ -7,6 +7,6 @@ class CommonTest {
 
     @Test
     fun testHealthCheck() {
-        assertEquals("canvas ok", healthCheck())
+        assertEquals("Success", healthCheck())
     }
 }

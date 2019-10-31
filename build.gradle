@@ -41,7 +41,7 @@ kotlin {
         // For Linux, preset should be changed to e.g. presets.linuxX64
         // For MacOS, preset should be changed to e.g. presets.macosX64
         fromPreset(presets.iosX64, 'ios') {
-            compilations.main.outputKinds('FRAMEWORK')
+//            compilations.main.outputKinds('FRAMEWORK')
         }
     }
     sourceSets {

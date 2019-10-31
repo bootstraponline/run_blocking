@@ -10,7 +10,7 @@ expect fun <T> runBlocking(block: suspend () -> T): T
 fun healthCheck(): String {
     return runBlocking {
         HttpClient().use {
-            it.call("http://this.is.a.test.instructure.com/health_check").response.readText()
+            it.call("http://robinhood.com/healthcheck").response.readText()
         }
     }
 }
