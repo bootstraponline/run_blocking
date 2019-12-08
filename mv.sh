@@ -1,10 +1,12 @@
 #!/bin/bash
 
-./gradlew clean assemble
+./gradlew clean build
 
-rm -rf "../ios/ios-frameworks/run_blocking.framework/"
-rm -rf "../ios/ios-frameworks/run_blocking.framework.dSYM"
+IOS_FRAMEWORKS="./ios_frameworks/"
 
-cp -R "./build/bin/ios/main/debug/framework/run_blocking.framework" "../ios/ios-frameworks/run_blocking.framework/"
+rm -rf "$IOS_FRAMEWORKS"
+mkdir -p "$IOS_FRAMEWORKS"
 
-cp -R "./build/bin/ios/main/debug/framework/run_blocking.framework.dSYM" "../ios/ios-frameworks/run_blocking.framework.dSYM/"
+cp -R "./build/bin/ios/debugFramework/run_blocking.framework" "$IOS_FRAMEWORKS"
+cp -R "./build/bin/ios/debugFramework/run_blocking.framework.dSYM" "$IOS_FRAMEWORKS"
+
