@@ -1,3 +1,3 @@
 # Run Blocking Kotlin Native
 
-See `mv.sh` to build the iOS framework.
+See `ios.sh` to build the iOS framework.
