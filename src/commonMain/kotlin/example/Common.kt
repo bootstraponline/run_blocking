@@ -11,7 +11,7 @@ expect fun <T> runBlocking(block: suspend () -> T): T
 fun healthCheck(): String {
     return runBlocking {
         HttpClient().use {
-            it.request<HttpResponse>("http://robinhood.com/healthcheck") {}
+            it.request<HttpResponse>("https://robinhood.com/healthcheck") {}
                 .readText()
         }
     }
