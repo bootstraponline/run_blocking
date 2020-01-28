@@ -19,6 +19,6 @@ pluginManagement {
         }
     }
 }
-rootProject.name = 'run_blocking'
+rootProject.name = 'run_blocking_gogo'
 
 enableFeaturePreview('GRADLE_METADATA')

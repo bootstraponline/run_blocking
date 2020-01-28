@@ -4,3 +4,4 @@ build/
 .idea/
 ios_frameworks/
 .DS_Store
+local.properties
