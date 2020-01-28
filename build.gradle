@@ -12,87 +12,20 @@ buildscript {
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
-//        classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:$kotlin_version"
     }
 }
 
-//apply plugin: 'kotlin-platform-native'
+allprojects {
+    repositories {
+        maven { url "http://kotlin.bintray.com/kotlin-eap" }
+        maven { url "http://kotlin.bintray.com/kotlin-dev" }
+        maven { url "https://kotlin.bintray.com/kotlinx" }
+        maven { url "https://dl.bintray.com/kotlin/ktor" }
+        maven { url "https://dl.bintray.com/sargunster/maven" }
+        maven { url "https://dl.bintray.com/kotlin/squash" }
+        maven { url "https://dl.bintray.com/russhwolf/multiplatform-settings" }
 
-repositories {
-    maven { url "http://kotlin.bintray.com/kotlin-eap" }
-    maven { url "http://kotlin.bintray.com/kotlin-dev" }
-    maven { url "https://kotlin.bintray.com/kotlinx" }
-    maven { url "https://dl.bintray.com/kotlin/ktor" }
-    maven { url "https://dl.bintray.com/sargunster/maven" }
-    maven { url "https://dl.bintray.com/kotlin/squash" }
-    maven { url "https://dl.bintray.com/russhwolf/multiplatform-settings" }
-
-    google()
-    jcenter()
-}
-
-apply plugin: 'kotlin-multiplatform'
-apply plugin: 'kotlinx-serialization'
-
-kotlin {
-    targets {
-        fromPreset(presets.jvm, 'jvm')
-        // For ARM, preset should be changed to presets.iosArm32 or presets.iosArm64
-        // For Linux, preset should be changed to e.g. presets.linuxX64
-        // For MacOS, preset should be changed to e.g. presets.macosX64
-        fromPreset(presets.iosX64, 'ios') {
-            binaries {
-                framework {
-                    // Disable bitcode embedding for the simulator build.
-                    // https://github.com/Kotlin/mpp-example/blob/master/greeting/build.gradle#L47
-                    embedBitcode("disable")
-                }
-            }
-        }
-    }
-    sourceSets {
-        commonMain {
-            dependencies {
-                implementation 'org.jetbrains.kotlin:kotlin-stdlib-common'
-                implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-common:$coroutines_version"
-                implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:$serialization_version"
-
-                implementation "io.ktor:ktor-client-core:$ktor_version"
-                implementation "io.ktor:ktor-client-json:$ktor_version"
-            }
-        }
-        commonTest {
-            dependencies {
-                implementation 'org.jetbrains.kotlin:kotlin-test-common'
-                implementation 'org.jetbrains.kotlin:kotlin-test-annotations-common'
-            }
-        }
-        jvmMain {
-            dependencies {
-                implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
-                implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
-                implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$serialization_version"
-
-                implementation "io.ktor:ktor-client-core-jvm:$ktor_version"
-                implementation "io.ktor:ktor-client-apache:$ktor_version"
-                implementation "io.ktor:ktor-client-json-jvm:$ktor_version"
-            }
-        }
-        jvmTest {
-            dependencies {
-                implementation 'org.jetbrains.kotlin:kotlin-test'
-                implementation 'org.jetbrains.kotlin:kotlin-test-junit'
-            }
-        }
-        iosMain {
-            dependencies {
-                // https://ktor.io/clients/http-client/multiplatform.html
-                implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:$coroutines_version"
-                implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:$serialization_version"
-                implementation "io.ktor:ktor-client-ios:$ktor_version"
-            }
-        }
-        iosTest {
-        }
+        google()
+        jcenter()
     }
 }
