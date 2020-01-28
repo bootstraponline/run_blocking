@@ -6,8 +6,6 @@ import io.ktor.client.statement.HttpResponse
 import io.ktor.client.statement.readText
 import io.ktor.utils.io.core.use
 
-expect fun <T> runBlocking(block: suspend () -> T): T
-
 fun healthCheck(): String {
     return runBlocking {
         HttpClient().use {
