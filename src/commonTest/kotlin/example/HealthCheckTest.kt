@@ -3,7 +3,7 @@ package example
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-class CommonTest {
+class HealthCheckTest {
 
     @Test
     fun testHealthCheck() {
