@@ -23,4 +23,4 @@ rootProject.name = 'run_blocking_gogo'
 
 enableFeaturePreview('GRADLE_METADATA')
 
-include ':common'
+include ':common', ':android'
