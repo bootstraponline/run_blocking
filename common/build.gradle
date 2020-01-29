@@ -1,5 +1,6 @@
 apply plugin: 'kotlin-multiplatform'
 apply plugin: 'kotlinx-serialization'
+apply plugin: 'com.android.library'
 
 kotlin {
     targets {
@@ -17,6 +18,7 @@ kotlin {
             }
         }
     }
+    android()
     sourceSets {
         commonMain {
             dependencies {
@@ -54,12 +56,39 @@ kotlin {
         iosMain {
             dependencies {
                 // https://ktor.io/clients/http-client/multiplatform.html
+                implementation 'org.jetbrains.kotlin:kotlin-stdlib'
                 implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:$coroutines_version"
                 implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:$serialization_version"
                 implementation "io.ktor:ktor-client-ios:$ktor_version"
             }
         }
-        iosTest {
+        androidMain {
+            dependencies {
+                implementation 'org.jetbrains.kotlin:kotlin-stdlib'
+                implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+                implementation "io.ktor:ktor-client-android:$ktor_version"
+            }
+        }
+    }
+}
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 29
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            manifest.srcFile "src/androidMain/AndroidManifest.xml"
+            java.srcDirs "src/androidMain/kotlin"
         }
     }
 }
