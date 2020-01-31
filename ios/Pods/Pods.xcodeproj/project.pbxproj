@@ -51,7 +51,7 @@
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		33A15B4FD87EB7D567310607DE5FF687 /* Pods_runblockingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_runblockingTests.framework; path = "Pods-runblockingTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E0679757C76DD332B29BD6DFCF5EC5 /* Pods-runblockingTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-runblockingTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		44557C5E505F55242B434835E5AF56F9 /* common.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = common.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		64B914B54EAC0652DC89A1A37CE776B6 /* common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = common.framework; path = build/cocoapods/framework/common.framework; sourceTree = "<group>"; };
 		7F12125113510817416855C266FE8595 /* Pods-runblocking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-runblocking-umbrella.h"; sourceTree = "<group>"; };
 		829EB669B286AAA4BAD91204CE8B6A52 /* Pods_runblocking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_runblocking.framework; path = "Pods-runblocking.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86071C7F1F1F0AAB443E3BAC382CAAAB /* Pods-runblocking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-runblocking-dummy.m"; sourceTree = "<group>"; };
@@ -62,12 +62,13 @@
 		A3C97A134DC06F896E661CB9F3C403C2 /* Pods-runblocking-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-runblocking-Info.plist"; sourceTree = "<group>"; };
 		A8EBF5697CBEAB5FDCDBCF3E94DA7F3C /* Pods-runblockingTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-runblockingTests-dummy.m"; sourceTree = "<group>"; };
 		A8F6EB80021D9E3F987F9D77F75E9006 /* Pods-runblockingTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-runblockingTests-Info.plist"; sourceTree = "<group>"; };
-		A9F3BF30FDE968153A44B98AE637AB7D /* common.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = common.xcconfig; sourceTree = "<group>"; };
+		C1419A3004E9ECC1EE65A80DAAC9788C /* common.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = common.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C713C74074E6AF5AD8A8D35579074767 /* Pods-runblockingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-runblockingTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF835DA78BC2909427D7DD42A16C6B31 /* Pods-runblockingTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-runblockingTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D66412D10F4C99289E2A3A575D4A8A28 /* Pods-runblocking-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-runblocking-acknowledgements.plist"; sourceTree = "<group>"; };
 		EF34EE9EF998C9EF01002059B8000CF1 /* Pods-runblocking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-runblocking.modulemap"; sourceTree = "<group>"; };
 		F65D043BF6E25CF054ABAEDAE63268DE /* Pods-runblockingTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-runblockingTests.modulemap"; sourceTree = "<group>"; };
+		FFA5CB2A7C96E76D2760C93026AE994F /* common.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = common.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,14 +91,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03B2848CB13EAC1E7203438AAB3FB434 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8FFD08A3885DDCC60171092B9C351E30 /* common */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		0718918A14C84DC9F5AF7FEEF37027AA /* Pods-runblockingTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +116,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		36D7A74965443AEF715D6E7F6A94C019 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				C1419A3004E9ECC1EE65A80DAAC9788C /* common.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		3DADBEEEEEDAEB152E495A9FC6E02C55 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,22 +133,40 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		8FFD08A3885DDCC60171092B9C351E30 /* common */ = {
+		8F45F4B53BD2DF9297BB47D6C869A31E /* common */ = {
 			isa = PBXGroup;
 			children = (
-				A242A6E11FCFC1CFD73186B0B9A83410 /* Pod */,
-				C892C0C77FE41D57EB9462A231F95393 /* Support Files */,
+				9716BC045A9698D1B943F9882A1AC83D /* Frameworks */,
+				36D7A74965443AEF715D6E7F6A94C019 /* Pod */,
+				9295D9EB5251A885C11BBD4DB481C1CD /* Support Files */,
 			);
 			name = common;
 			path = ../../common;
 			sourceTree = "<group>";
 		};
-		A242A6E11FCFC1CFD73186B0B9A83410 /* Pod */ = {
+		9295D9EB5251A885C11BBD4DB481C1CD /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				44557C5E505F55242B434835E5AF56F9 /* common.podspec */,
+				FFA5CB2A7C96E76D2760C93026AE994F /* common.xcconfig */,
 			);
-			name = Pod;
+			name = "Support Files";
+			path = "../ios/Pods/Target Support Files/common";
+			sourceTree = "<group>";
+		};
+		9716BC045A9698D1B943F9882A1AC83D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64B914B54EAC0652DC89A1A37CE776B6 /* common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A534ECAEA5F0A03EFFABCF1B79475E00 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F45F4B53BD2DF9297BB47D6C869A31E /* common */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -174,20 +193,11 @@
 			path = "Target Support Files/Pods-runblocking";
 			sourceTree = "<group>";
 		};
-		C892C0C77FE41D57EB9462A231F95393 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A9F3BF30FDE968153A44B98AE637AB7D /* common.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../ios/Pods/Target Support Files/common";
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				03B2848CB13EAC1E7203438AAB3FB434 /* Development Pods */,
+				A534ECAEA5F0A03EFFABCF1B79475E00 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				0FBAC8A4B59039B0F94018D15183A169 /* Products */,
 				3DADBEEEEEDAEB152E495A9FC6E02C55 /* Targets Support Files */,
@@ -461,7 +471,7 @@
 		};
 		992E07FFE31C70EDED31049B5CE3FF07 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9F3BF30FDE968153A44B98AE637AB7D /* common.xcconfig */;
+			baseConfigurationReference = FFA5CB2A7C96E76D2760C93026AE994F /* common.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -515,7 +525,7 @@
 		};
 		CEAF10495956F6A94FD848EC8CCAE493 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9F3BF30FDE968153A44B98AE637AB7D /* common.xcconfig */;
+			baseConfigurationReference = FFA5CB2A7C96E76D2760C93026AE994F /* common.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
