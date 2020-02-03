@@ -14,8 +14,6 @@
 		9F20B39823E45DFC001BD226 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F20B39723E45DFC001BD226 /* Preview Assets.xcassets */; };
 		9F20B39B23E45DFC001BD226 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F20B39923E45DFC001BD226 /* LaunchScreen.storyboard */; };
 		9F20B3A623E45DFC001BD226 /* runblockingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F20B3A523E45DFC001BD226 /* runblockingTests.swift */; };
-		B300E2816B0BA8511C58DDB3 /* Pods_runblockingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 610EAEB5AAB8E861449EF315 /* Pods_runblockingTests.framework */; };
-		C3A959DBEC77989F793C5731 /* Pods_runblocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB024CA87BEECD0129F9947B /* Pods_runblocking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +27,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2281B91F5F3CFD42FB7AE447 /* Pods-runblockingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-runblockingTests.debug.xcconfig"; path = "Target Support Files/Pods-runblockingTests/Pods-runblockingTests.debug.xcconfig"; sourceTree = "<group>"; };
-		610EAEB5AAB8E861449EF315 /* Pods_runblockingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_runblockingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F20B38B23E45DFC001BD226 /* runblocking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = runblocking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F20B38E23E45DFC001BD226 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F20B39023E45DFC001BD226 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,10 +38,6 @@
 		9F20B3A123E45DFC001BD226 /* runblockingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = runblockingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F20B3A523E45DFC001BD226 /* runblockingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = runblockingTests.swift; sourceTree = "<group>"; };
 		9F20B3A723E45DFC001BD226 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D24189178E6D12D7DC87C000 /* Pods-runblockingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-runblockingTests.release.xcconfig"; path = "Target Support Files/Pods-runblockingTests/Pods-runblockingTests.release.xcconfig"; sourceTree = "<group>"; };
-		DB024CA87BEECD0129F9947B /* Pods_runblocking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_runblocking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2BBB562C09989C081191869 /* Pods-runblocking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-runblocking.debug.xcconfig"; path = "Target Support Files/Pods-runblocking/Pods-runblocking.debug.xcconfig"; sourceTree = "<group>"; };
-		E2CCEDDF93F0253F497D347F /* Pods-runblocking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-runblocking.release.xcconfig"; path = "Target Support Files/Pods-runblocking/Pods-runblocking.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +45,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3A959DBEC77989F793C5731 /* Pods_runblocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,30 +52,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B300E2816B0BA8511C58DDB3 /* Pods_runblockingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		87BCBD428DF5B010E45D1630 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DB024CA87BEECD0129F9947B /* Pods_runblocking.framework */,
-				610EAEB5AAB8E861449EF315 /* Pods_runblockingTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		9F20B38223E45DFB001BD226 = {
 			isa = PBXGroup;
 			children = (
 				9F20B38D23E45DFC001BD226 /* runblocking */,
 				9F20B3A423E45DFC001BD226 /* runblockingTests */,
 				9F20B38C23E45DFC001BD226 /* Products */,
-				FAE9FE7B0B82A4FF72362C73 /* Pods */,
-				87BCBD428DF5B010E45D1630 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,18 +107,6 @@
 			path = runblockingTests;
 			sourceTree = "<group>";
 		};
-		FAE9FE7B0B82A4FF72362C73 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E2BBB562C09989C081191869 /* Pods-runblocking.debug.xcconfig */,
-				E2CCEDDF93F0253F497D347F /* Pods-runblocking.release.xcconfig */,
-				2281B91F5F3CFD42FB7AE447 /* Pods-runblockingTests.debug.xcconfig */,
-				D24189178E6D12D7DC87C000 /* Pods-runblockingTests.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,7 +114,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F20B3AA23E45DFC001BD226 /* Build configuration list for PBXNativeTarget "runblocking" */;
 			buildPhases = (
-				A7623CC522BD74F84E35B3EE /* [CP] Check Pods Manifest.lock */,
 				9F20B38723E45DFC001BD226 /* Sources */,
 				9F20B38823E45DFC001BD226 /* Frameworks */,
 				9F20B38923E45DFC001BD226 /* Resources */,
@@ -165,7 +131,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F20B3AD23E45DFC001BD226 /* Build configuration list for PBXNativeTarget "runblockingTests" */;
 			buildPhases = (
-				ECC4233C339BD4E0593D5974 /* [CP] Check Pods Manifest.lock */,
 				9F20B39D23E45DFC001BD226 /* Sources */,
 				9F20B39E23E45DFC001BD226 /* Frameworks */,
 				9F20B39F23E45DFC001BD226 /* Resources */,
@@ -237,53 +202,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		A7623CC522BD74F84E35B3EE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-runblocking-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ECC4233C339BD4E0593D5974 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-runblockingTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9F20B38723E45DFC001BD226 /* Sources */ = {
@@ -442,7 +360,6 @@
 		};
 		9F20B3AB23E45DFC001BD226 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2BBB562C09989C081191869 /* Pods-runblocking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -462,7 +379,6 @@
 		};
 		9F20B3AC23E45DFC001BD226 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2CCEDDF93F0253F497D347F /* Pods-runblocking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -482,7 +398,6 @@
 		};
 		9F20B3AE23E45DFC001BD226 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2281B91F5F3CFD42FB7AE447 /* Pods-runblockingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -504,7 +419,6 @@
 		};
 		9F20B3AF23E45DFC001BD226 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D24189178E6D12D7DC87C000 /* Pods-runblockingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
