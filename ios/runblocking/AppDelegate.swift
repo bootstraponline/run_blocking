@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  runblocking
-//
-//  Created by Janek Góral on 31/01/2020.
-//  Copyright © 2020 gogoapps. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
