@@ -1,18 +1,17 @@
 apply plugin: 'kotlin-multiplatform'
 apply plugin: 'kotlinx-serialization'
 apply plugin: 'com.android.library'
-apply plugin: 'org.jetbrains.kotlin.native.cocoapods'
-
-version '1.0.0'
-
 
 kotlin {
-    cocoapods {
-        homepage = 'https://github.com/jan-gogo/run_blocking'
-        summary = 'Common module for run blocking example'
-    }
     jvm()
     iosX64('ios') {
+        binaries {
+            framework {
+                // Disable bitcode embedding for the simulator build.
+                // https://github.com/Kotlin/mpp-example/blob/master/greeting/build.gradle#L47
+                embedBitcode("disable")
+            }
+        }
         compilations.main {
             kotlinOptions.freeCompilerArgs += "-Xobjc-generics"
         }
