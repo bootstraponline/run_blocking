@@ -20,7 +20,7 @@ kotlin {
     ios("ios") {
         binaries {
             framework {
-                baseName = "common"
+                baseName = "CommonRunBlocking"
                 embedBitcode = BITCODE
                 transitiveExport = true
             }
@@ -97,3 +97,20 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
+
+val packForXcode by tasks.creating(Sync::class) {
+    group = "build"
+
+    //selecting the right configuration for the iOS framework depending on the Xcode environment variables
+    val mode = System.getenv("CONFIGURATION") ?: "DEBUG"
+    val framework = kotlin.targets.getByName<KotlinNativeTarget>("ios").binaries.getFramework(mode)
+
+    inputs.property("mode", mode)
+    dependsOn(framework.linkTask)
+
+    val targetDir = File(buildDir, "xcode-frameworks")
+    from({ framework.outputDirectory })
+    into(targetDir)
+}
+
+tasks.getByName("build").dependsOn(packForXcode)

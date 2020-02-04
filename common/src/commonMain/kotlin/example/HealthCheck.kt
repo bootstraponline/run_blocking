@@ -7,6 +7,7 @@ import io.ktor.client.statement.readText
 import io.ktor.utils.io.core.use
 
 fun healthCheck(): String {
+    println("testing health check")
     return runBlocking {
         HttpClient().use {
             it.request<HttpResponse>("https://robinhood.com/healthcheck") {}
