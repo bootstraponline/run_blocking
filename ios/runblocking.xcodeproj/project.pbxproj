@@ -14,6 +14,9 @@
 		9F20B39823E45DFC001BD226 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F20B39723E45DFC001BD226 /* Preview Assets.xcassets */; };
 		9F20B39B23E45DFC001BD226 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F20B39923E45DFC001BD226 /* LaunchScreen.storyboard */; };
 		9F20B3A623E45DFC001BD226 /* runblockingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F20B3A523E45DFC001BD226 /* runblockingTests.swift */; };
+		9FD040D823E977F8004FFD4D /* CommonRunBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD040D723E977F8004FFD4D /* CommonRunBlocking.framework */; };
+		9FD040D923E977F8004FFD4D /* CommonRunBlocking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD040D723E977F8004FFD4D /* CommonRunBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9FD040DC23E97FCD004FFD4D /* HealthCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD040DB23E97FCD004FFD4D /* HealthCheck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +28,20 @@
 			remoteInfo = runblocking;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9FD040DA23E977F8004FFD4D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9FD040D923E977F8004FFD4D /* CommonRunBlocking.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9F20B38B23E45DFC001BD226 /* runblocking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = runblocking.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +55,10 @@
 		9F20B3A123E45DFC001BD226 /* runblockingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = runblockingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F20B3A523E45DFC001BD226 /* runblockingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = runblockingTests.swift; sourceTree = "<group>"; };
 		9F20B3A723E45DFC001BD226 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FD040CD23E969A6004FFD4D /* SharedCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SharedCode.framework; path = "../../mpp-ios-android/SharedCode/build/xcode-frameworks/SharedCode.framework"; sourceTree = "<group>"; };
+		9FD040D323E97084004FFD4D /* common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = common.framework; path = "../common/build/xcode-frameworks/common.framework"; sourceTree = "<group>"; };
+		9FD040D723E977F8004FFD4D /* CommonRunBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonRunBlocking.framework; path = "../common/build/xcode-frameworks/CommonRunBlocking.framework"; sourceTree = "<group>"; };
+		9FD040DB23E97FCD004FFD4D /* HealthCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCheck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FD040D823E977F8004FFD4D /* CommonRunBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +86,7 @@
 				9F20B38D23E45DFC001BD226 /* runblocking */,
 				9F20B3A423E45DFC001BD226 /* runblockingTests */,
 				9F20B38C23E45DFC001BD226 /* Products */,
+				9FD040CC23E969A6004FFD4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +109,7 @@
 				9F20B39923E45DFC001BD226 /* LaunchScreen.storyboard */,
 				9F20B39C23E45DFC001BD226 /* Info.plist */,
 				9F20B39623E45DFC001BD226 /* Preview Content */,
+				9FD040DB23E97FCD004FFD4D /* HealthCheck.swift */,
 			);
 			path = runblocking;
 			sourceTree = "<group>";
@@ -107,6 +131,16 @@
 			path = runblockingTests;
 			sourceTree = "<group>";
 		};
+		9FD040CC23E969A6004FFD4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FD040D723E977F8004FFD4D /* CommonRunBlocking.framework */,
+				9FD040D323E97084004FFD4D /* common.framework */,
+				9FD040CD23E969A6004FFD4D /* SharedCode.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F20B3AA23E45DFC001BD226 /* Build configuration list for PBXNativeTarget "runblocking" */;
 			buildPhases = (
+				9FD040D623E97099004FFD4D /* ShellScript */,
 				9F20B38723E45DFC001BD226 /* Sources */,
 				9F20B38823E45DFC001BD226 /* Frameworks */,
 				9F20B38923E45DFC001BD226 /* Resources */,
+				9FD040DA23E977F8004FFD4D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -203,11 +239,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9FD040D623E97099004FFD4D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n#cd \"$SRCROOT/../common/build/xcode-frameworks\"\n#./gradlew \":common:packForXcode\" -PXCODE_CONFIGURATION=${CONFIGURATION}\n#./gradlew \":common:packForXcode\"\n\"$SRCROOT/../gradlew\" -p \"$SRCROOT/../common\" \":common:packForXcode\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9F20B38723E45DFC001BD226 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FD040DC23E97FCD004FFD4D /* HealthCheck.swift in Sources */,
 				9F20B38F23E45DFC001BD226 /* AppDelegate.swift in Sources */,
 				9F20B39123E45DFC001BD226 /* SceneDelegate.swift in Sources */,
 				9F20B39323E45DFC001BD226 /* ContentView.swift in Sources */,
@@ -365,6 +422,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"runblocking/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"/Users/janek/projects/mpp-ios-android/SharedCode/build/xcode-frameworks",
+					"/Users/janek/projects/run-blocking-gogo/common/build/xcode-frameworks",
+				);
 				INFOPLIST_FILE = runblocking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -384,6 +445,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"runblocking/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"/Users/janek/projects/mpp-ios-android/SharedCode/build/xcode-frameworks",
+					"/Users/janek/projects/run-blocking-gogo/common/build/xcode-frameworks",
+				);
 				INFOPLIST_FILE = runblocking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
